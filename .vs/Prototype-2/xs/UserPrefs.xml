@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{9F7DA9BA-5C41-085C-71E8-9689E07EE33A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MoveForward.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="38" Column="100" />
+      <File FileName="Assets/Scripts/MoveForward.cs" Line="7" Column="32" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Prototype-2" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="MoveForward.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ec34950f-3049-425c-ad4b-484465a29705" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
