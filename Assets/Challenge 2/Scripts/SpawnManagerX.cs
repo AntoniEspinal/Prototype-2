@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManagerX : MonoBehaviour
 {
-    public GameObject[] ballPrefabs;
+    public GameObject[] animalPrefabs;
 
     private float spawnLimitXLeft = -22;
     private float spawnLimitXRight = 7;
@@ -16,18 +16,18 @@ public class SpawnManagerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandomBall", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
-    // Spawn random ball at random x position at top of play area
-    void SpawnRandomBall ()
+    // Spawn random animal at random x position at top of play area
+    void SpawnRandomAnimal ()
     {
-        // Generate random ball index and random spawn position
+        // Generate random animal index and random spawn position
         Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY, 0);
-        int ballIndex = Random.Range(0, ballPrefabs.Length);
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
 
-        // instantiate ball at random spawn location
-        Instantiate(ballPrefabs[ballIndex], spawnPos, ballPrefabs[ballIndex].transform.rotation);
+        // instantiate animal at random spawn location
+        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
     }
 
 }
