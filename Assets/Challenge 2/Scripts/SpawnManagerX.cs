@@ -9,7 +9,8 @@ public class SpawnManagerX : MonoBehaviour
     private float spawnLimitXLeft = -22;
     private float spawnLimitXRight = 7;
     private float spawnPosY = 30;
-
+    private float spawnRangeX = 20;
+    private float spawnPosZ = 20;
     private float startDelay = 1.0f;
     private float spawnInterval = 4.0f;
 
@@ -22,12 +23,12 @@ public class SpawnManagerX : MonoBehaviour
     // Spawn random animal at random x position at top of play area
     void SpawnRandomAnimal ()
     {
-        // Generate random animal index and random spawn position
-        Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY, 0);
+        Vector3 spawnPosX = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
         int animalIndex = Random.Range(0, animalPrefabs.Length);
+        Instantiate(animalPrefabs[animalIndex], spawnPosX, animalPrefabs[animalIndex].transform.rotation);
 
-        // instantiate animal at random spawn location
-        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        Vector3 spawnLeft = new Vector3(-25, 0, Random.Range(0, 25));
+        Instantiate(animalPrefabs[animalIndex], spawnLeft, animalPrefabs[animalIndex].transform.rotation);
     }
 
 }
