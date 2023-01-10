@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 10;
+    float zMax = 15;
+    float zMin = -5;
     public GameObject projectilePrefab;
     public float verticalInput; 
 
@@ -34,6 +36,15 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+        if (transform.position.z < zMin)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMin);
+        } 
+      
+        if (transform.position.z > zMax)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMax);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
